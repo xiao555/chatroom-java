@@ -1,0 +1,51 @@
+
+package com.connection;
+
+import com.bean.ChatBean;
+import com.bean.ClientBean;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.SocketAddress;
+import java.nio.channels.ClosedChannelException;
+import java.util.HashMap;
+
+public interface Conn {
+    public Socket getSocket();
+
+    public ChatBean getBean();
+
+    public void sendAll(ChatBean serverBean);
+
+    public void sendMessage(ChatBean serverBean);
+
+    void write(byte[] var1) throws ClosedChannelException;
+
+    void close() throws IOException;
+
+    void doClose() throws IOException;
+
+    SocketAddress getLocalAddress() throws IOException;
+
+    SocketAddress getRemoteAddress() throws IOException;
+
+    void setSendBuffer(int var1) throws IOException;
+
+    void setRecvBuffer(int var1) throws IOException;
+
+    void setKeepAlive(boolean var1) throws IOException;
+
+    void setReUseAddr(boolean var1) throws IOException;
+
+    void setNoDelay(boolean var1) throws IOException;
+
+    int getSendBuffer() throws IOException;
+
+    int getRecvBuffer() throws IOException;
+
+    boolean getKeepAlive() throws IOException;
+
+    boolean getReUseAddr() throws IOException;
+
+    boolean getNoDelay() throws IOException;
+}
