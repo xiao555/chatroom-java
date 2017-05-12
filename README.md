@@ -19,7 +19,7 @@
 
 ### ChatRoom
 
-完成的ChatRoom实现，服务端入口`src/ChatRoomServer`, 客户端入口`src/ChatLogin`, 
+完整的ChatRoom实现，服务端入口`src/ChatRoomServer`, 客户端入口`src/ChatLogin`, 
 1. 没有数据库，用户信息保存在`Users.properties`目录里。
 2. 发送消息时要在右面的在线用户里选择要发送的对象，可多选。
 3. 双击用户激活文件传输功能
