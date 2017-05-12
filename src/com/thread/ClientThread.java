@@ -35,6 +35,8 @@ public class ClientThread implements Runnable {
                 switch (bean.getType()) {
                     case -1: {
                         System.out.println("已下线");
+                        Connection conn = new Connection(client, param);
+                        param.getOnClose().onClose(conn);
                         return;
                     }
                     case 0: { // 有人上下线

@@ -25,7 +25,7 @@ public class Connector implements Runnable {
     }
 
     public void connect(String host,int port) throws IOException {
-        clientSocket = new Socket("localhost", 8888);
+        clientSocket = new Socket(host, port);
         Connection connection = new Connection(clientSocket, param);
         if (param.getOnConnection() != null) {
             param.getOnConnection().onConnection(connection);

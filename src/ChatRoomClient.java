@@ -112,9 +112,6 @@ public class ChatRoomClient extends JFrame {
             @Override
             protected void paintComponent(Graphics g) {
                 super.paintComponent(g);
-                URL url = ChatRoomClient.class.getResource("bg.jpg");
-                g.drawImage(new ImageIcon(url).getImage(), 0, 0,
-                        688, 510, null);
             }
 
         };

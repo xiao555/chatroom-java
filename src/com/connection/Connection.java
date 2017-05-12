@@ -34,6 +34,11 @@ public class Connection {
         this.clientParam = param;
     }
 
+    public Connection(Socket socket, ServerParam param) {
+        this.socket = socket;
+        this.param = param;
+    }
+
     public Socket getSocket() {
         return socket;
     }
